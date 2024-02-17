@@ -8,13 +8,13 @@ namespace Esercizio_Vettori
 {
     struct Vector
     {
-        private readonly float _x;
-        private readonly float _y;
+        private readonly double _x;
+        private readonly double _y;
 
-        public float X { get { return _x; } }
-        public float Y { get { return _y; } }
+        public double X { get { return _x; } }
+        public double Y { get { return _y; } }
 
-        public Vector(float x, float y)
+        public Vector(double x, double y)
         {
             _x = x; 
             _y = y;
@@ -37,9 +37,9 @@ namespace Esercizio_Vettori
         {
             return new Vector(-a.X, -a.Y);
         }
-        public static Vector operator *(Vector a, Vector b)
+        public static double operator *(Vector a, Vector b)
         {
-            return new Vector(a.X * b.X, a.Y * b.Y);
+            return a.X * b.X + a.Y * b.Y;
         }
         public static Vector operator *(int a, Vector b)
         {
@@ -48,6 +48,10 @@ namespace Esercizio_Vettori
         public static Vector operator *(Vector a, int b)
         {
             return new Vector(a.X * b, a.Y * b);
+        }
+        public static Vector operator /(Vector a, int b)
+        {
+            return new Vector(a.X / b, a.Y / b);
         }
         public override string ToString()
         {

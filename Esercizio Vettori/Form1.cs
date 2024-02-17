@@ -43,34 +43,5 @@ namespace Esercizio_Vettori
             label2.Text = (-v1).ToString();
         }
 
-        /*
-        private void button3_Click(object sender, EventArgs e)
-        {
-            int a = 0;
-            if(Vector.TryParse(textBox1.Text, out Vector v1))
-            {
-                a = int.Parse(textBox1.Text);
-            }
-            if (Vector.TryParse(textBox2.Text, out Vector v2))
-            {
-                a = int.Parse(textBox2.Text);
-            }
-
-            if(v1 != Vector.Parse("0; 0") && v2 != Vector.Parse("0; 0"))
-            {
-                label2.Text = (v1 * v2).ToString();
-            }
-            else if(v1 != Vector.Parse("0; 0"))
-            {
-                label2.Text = (v1 * a).ToString();
-            }
-            else if (v2 != Vector.Parse("0; 0"))
-            {
-                label2.Text = (a * v2).ToString();
-            }
-
-        }
-        */
-
     }
 }
