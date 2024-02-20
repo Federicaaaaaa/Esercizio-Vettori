@@ -55,16 +55,16 @@ namespace Esercizio_Vettori
         }
         public override string ToString()
         {
-            return $"{X}; {Y}";
+            return $"{X}, {Y}";
         }
         public static Vector Parse(string s)
         {
-            string[] parts = s.Split(';', ' ');
+            string[] parts = s.Split(',', ' ');
             return new Vector(int.Parse(parts[0]), int.Parse(parts[2]));
         }
         public static bool TryParse(string s, out Vector v)
         {
-            String[] parts = s.Split(';', ' ');
+            String[] parts = s.Split(',', ' ');
             if (parts.Length != 2)
             {
                 v = Vector.Parse("0; 0");
@@ -79,7 +79,7 @@ namespace Esercizio_Vettori
             }
 
             int d;
-            if (int.TryParse(parts[1], out d))
+            if (int.TryParse(parts[2], out d))
             {
                 v = Vector.Parse("0; 0");
                 return false;
