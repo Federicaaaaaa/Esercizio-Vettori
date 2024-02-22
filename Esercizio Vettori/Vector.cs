@@ -20,6 +20,17 @@ namespace Esercizio_Vettori
             _y = y;
         }
 
+        public static Vector Versore(Vector v)
+        {
+            double m = Modulo(v);
+            return v / m;
+        }
+
+        public static double Modulo(Vector v)
+        {
+            return (double)Math.Sqrt(v.X * v.X + v.Y * v.Y);
+        }
+
         public static Vector operator +(Vector a, Vector b)
         {
             return new Vector(a.X + b.X, a.Y + b.Y);
@@ -49,7 +60,7 @@ namespace Esercizio_Vettori
         {
             return new Vector(a.X * b, a.Y * b);
         }
-        public static Vector operator /(Vector a, int b)
+        public static Vector operator /(Vector a, double b)
         {
             return new Vector(a.X / b, a.Y / b);
         }
